@@ -7,7 +7,7 @@ The project focuses on fiction book metadata and demonstrates how data can be in
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 - Ingest book metadata from an external REST API.
 - Implement a structured Bronze, Silver, and Gold data pipeline.
@@ -17,7 +17,7 @@ The project focuses on fiction book metadata and demonstrates how data can be in
 - Orchestrate pipeline execution using Databricks Jobs.
 - Visualize analytical insights through an interactive Databricks dashboard.
 
-## 🏗️ Architecture
+##  Architecture
 
 The project follows the **Medallion Architecture**, organizing data into three progressive layers.
 
@@ -31,7 +31,7 @@ The project follows the **Medallion Architecture**, organizing data into three p
 
 `Open Library API → Bronze → Silver → Gold → ReadingRadar Dashboard`
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Cloud Data Platform:** Databricks
 - **Programming Language:** Python, PySpark
@@ -42,7 +42,7 @@ The project follows the **Medallion Architecture**, organizing data into three p
 - **Orchestration:** Databricks Jobs
 - **Version Control:** Git, GitHub
 
-## ⚙️ Data Pipeline
+##  Data Pipeline
 
 ### 1. Bronze Layer – Data Ingestion
 - Retrieves fiction book metadata using the Open Library API.
@@ -73,7 +73,7 @@ Creates the following analytics-ready datasets:
 | `books_gold_edition_distribution` | Distribution of books by edition-count category |
 | `books_gold_kpi_summary` | Summary metrics for the dashboard |
 
-## 📊 ReadingRadar – Analytics Dashboard
+##  ReadingRadar – Analytics Dashboard
 
 ReadingRadar is an interactive Databricks dashboard built on the Gold-layer datasets.
 
@@ -91,7 +91,7 @@ ReadingRadar is an interactive Databricks dashboard built on the Gold-layer data
 
 The dashboard provides an analytical view of the collected fiction metadata and helps explore patterns across authors, publication periods, and edition counts.
 
-## ✅ Data Quality Validation
+##  Data Quality Validation
 
 A data quality validation step is implemented in the Gold analytics notebook.
 
@@ -104,7 +104,7 @@ The checks include:
 
 The validation raises an exception if any critical check fails, preventing the notebook from reporting a successful validation when the data violates these conditions.
 
-## 🔄 Workflow Orchestration
+##  Workflow Orchestration
 
 The complete pipeline is orchestrated using a Databricks Job named `ReadingRadar_ETL_Job`.
 
@@ -116,7 +116,7 @@ The job executes three dependent notebook tasks in sequence:
 
 Each task runs only after its upstream dependency succeeds. The workflow also has email notifications configured for failed runs.
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 bookshelf-data-engineering/
@@ -130,8 +130,10 @@ bookshelf-data-engineering/
 ├── requirements.txt
 └── .gitignore
 ```
+## Architecture
+![BookShelf ReadingRadar Architecture Pipeline_1794637992343.png](./BookShelf ReadingRadar Architecture Pipeline_1794637992343.png "BookShelf ReadingRadar Architecture Pipeline_1794637992343.png")
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - A Databricks workspace.
@@ -149,7 +151,7 @@ bookshelf-data-engineering/
 4. Alternatively, execute the complete workflow using the Databricks Job `ReadingRadar_ETL_Job`.
 5. Explore the Gold datasets and ReadingRadar dashboard.
 
-## 📸 ReadingRadar Dashboard Preview
+##  ReadingRadar Dashboard Preview
 
 The ReadingRadar dashboard brings together key metrics and visual insights from the Gold-layer datasets.
 
@@ -162,7 +164,7 @@ The ReadingRadar dashboard brings together key metrics and visual insights from 
 
 The dashboard includes author rankings, publication trends by year and decade, and book edition distribution.
 
-## 🎓 Key Learning Outcomes
+##  Key Learning Outcomes
 
 Through this project, I gained practical experience with:
 
